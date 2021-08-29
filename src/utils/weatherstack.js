@@ -17,11 +17,16 @@ const weatherstack = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `Local time: ${body.location.localtime.slice(11, 16)}, Temperature: ${
-          body.current.temperature
-        }°C Feels like ${body.current.feelslike}°C, Humidity is ${
+        `🕐 Local time: ${body.location.localtime.slice(
+          11,
+          16
+        )}, 🌡 Temperature: ${body.current.temperature}°C, Feels like ${
+          body.current.feelslike
+        }°C, Humidity is ${
           body.current.humidity
-        }%`
+        }%. It is currently ${body.current.weather_descriptions[0]
+          .toString()
+          .toLowerCase()} outside.`
       );
     }
   });
