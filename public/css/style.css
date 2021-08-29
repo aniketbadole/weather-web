@@ -59,3 +59,12 @@ button {
   color: white;
   padding: 8px;
 }
+
+a {
+  text-decoration: none;
+  color: #253c5e;
+}
+
+a:hover {
+  text-decoration: underline;
+}
